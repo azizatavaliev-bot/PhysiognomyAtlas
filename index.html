@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Атлас физиогномики — учебный</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand" data-go="atlas">
+      <span class="brand-mark">◑</span>
+      <span class="brand-text">Атлас<span class="brand-sub">физиогномики</span></span>
+    </div>
+    <nav class="nav" id="nav">
+      <button class="nav-btn" data-go="atlas">Атлас</button>
+      <button class="nav-btn" data-go="trainer">Быстрое изучение</button>
+      <button class="nav-btn" data-go="quiz">Квиз</button>
+      <button class="nav-btn" data-go="principles">Принципы</button>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" title="Тема">☾</button>
+  </header>
+
+  <!-- DISCLAIMER STRIP -->
+  <div class="disclaimer-strip" id="disclaimerStrip">
+    <span class="disc-tag">не наука</span>
+    <span id="discText"></span>
+    <button class="disc-more" id="discMore">подробнее</button>
+  </div>
+
+  <main id="view"></main>
+
+  <footer class="footer">
+    <p class="footer-disc" id="footerDisc"></p>
+    <p class="footer-credit">Учебный атлас визуальных архетипов · не диагностика людей</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" id="modalCard"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
