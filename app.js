@@ -458,14 +458,16 @@ function renderDetail(id) {
   const contrastHtml = pair.length ? `
     <div class="contrast">
       <div class="contrast-h">Контраст в той же черте</div>
+      <div class="contrast-grid">
       ${pair.map((p) => `
-        <div class="contrast-card" data-id="${p.id}" style="margin-bottom:10px">
+        <div class="contrast-card" data-id="${p.id}">
           ${mediaHtml(p, "cc-img")}
           <div>
             <div class="cc-label">${esc(p.label)}</div>
             <div class="cc-perc">${esc(p.perception)}</div>
           </div>
         </div>`).join("")}
+      </div>
     </div>` : "";
 
   const seenHtml = extra && extra.seen ? `
